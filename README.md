@@ -4,6 +4,10 @@ BEM: BOX - ELEMEMT - MODIFIERAS
     block--modifier
     block__element--modifier
 
+```
+Hello mother fucker
+```
+
 Outline for programming 
 - header : đầu trang
 - navigation: điều hướng
