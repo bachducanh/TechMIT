@@ -4,10 +4,10 @@ BEM: BOX - ELEMEMT - MODIFIERAS
     block--modifier
     block__element--modifier
 
-```
-Hello mother fucker
-```
 
+```
+Code CSS dinh vl
+```
 Outline for programming 
 - header : đầu trang
 - navigation: điều hướng
