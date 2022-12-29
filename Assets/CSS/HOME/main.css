@@ -1,0 +1,328 @@
+/* ! Homepage-Hero-container */
+.homepage-hero-container .homepage-hero-primary{
+    background-color: #00262b;
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+.homepage-hero-container .homepage-hero-primary .main-content .text-block{
+    max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .homepage-hero-container
+    .homepage-hero-primary{
+        background-position-y: calc(-40vh);
+        margin-bottom: 32px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .homepage-hero-container
+    .homepage-hero-primary{
+        background-image: none !important;
+    }
+
+    .text-block
+    .display__text--white{
+        color: #fff !important;
+    }
+}
+
+/* ! Text block */
+@media (min-width: 768px) { 
+    .homepage-hero-container
+    .homepage-hero-primary
+    .main-content
+    .text-block{
+        padding-bottom: 4rem! important;
+        padding-left: 8rem !important;
+        padding-top: 3rem !important;
+    }
+}
+@media (max-width: 768px) { 
+    .homepage-hero-container
+    .homepage-hero-primary
+    .main-content
+    .text-block{
+        padding-bottom: 2rem! important;
+        padding-left: 3rem !important;
+        padding-top: 1rem !important;
+    }
+}
+
+/* ! Title */
+
+.display__text--white{
+    color: #00262b !important;
+    font-weight: 700;
+    line-height: 1;
+    font-size: 3.75rem;
+}
+
+.homepage-hero-container
+.homepage-hero-primary
+.main-content
+.color-emphasized{
+    color: #d23228 !important;
+}
+
+/* ! input Search */
+.search-bar-container{
+    margin-top: 3rem!important;
+    margin-bottom: 2rem!important;
+}
+
+.search-bar-container .home-searchbar{
+    display: flex;
+}
+
+.form-control{
+    padding: 0.8rem 1.25rem;
+    font-size: .85rem;
+    line-height: 180%;
+    border: 1px solid #e8e8e8;
+    /* border-radius: 5px; */
+}
+
+#choose-courses{
+    width: 276px;
+}
+
+.search-box{
+    margin-bottom: 1.25rem;
+}
+
+.home-search-box .btn--search__bgcolor-emphasized{
+    background-color: #d23228 !important;
+    color: #fff;
+    font-size: large;
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+}
+
+.search-box button:hover{
+    background-color: #921108 !important;
+    color: #fff;
+}
+
+.home-searchbar .hero-link{
+    color: #ccc;
+    font-weight: bold;
+    text-decoration: underline !important;
+}
+
+.homepage-hero-container
+#learner-wrapper{
+    background-color: #d23228;
+    color: #00262b;
+    padding-left: 24px;
+    transform: skew(-12deg);
+    max-width: 90%;
+    text-align: center;
+}
+.homepage-hero-container
+#learner-wrapper h1{
+    transform: skew(12deg);
+    color: #fff;
+    /* font-size: 1.25rem; */
+}
+
+/* ! Layout - content - container */
+#layout-content-container{
+    background-color: #fbfaf9 !important;
+}
+
+.title-new--header{
+    font-weight: 700;
+    line-height: 1;
+    font-size: 3.75rem;
+}
+
+.title-new--topic{
+    font-size: 2.25rem;
+    color: #00262b;
+    padding-top: 40px;
+}
+
+@media (max-width: 1920px) {
+    #container-fluid{
+        padding-left: 3rem !important;
+        padding-top: 3rem !important;
+        background-color: #fff !important;
+    }    
+}
+
+/* ! New Course */
+#new__course--d-flex-container .static-card-list{
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap !important;
+}
+
+#new__course--d-flex-container
+.static-card-list
+.product-card{
+    margin-right: 0 !important;
+    max-width: 281px;
+    min-width: 281px;
+    height: 350px !important;
+    margin-bottom: 24px;
+
+    /* ! Border of course */
+    /* border: 1px solid #333; */
+}
+
+.card{
+    word-wrap: break-word;
+    background-color: initial;
+    background-color:#00262b;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.375rem;
+    position: relative;
+    height: 100%;
+}
+
+@media (min-width: 1200px){
+    .product-card {
+        margin-bottom: 24px;
+        margin-right: 24px;
+    }
+}
+
+.course{
+    border-radius: 0.375rem;
+}
+
+.text-gray-700{
+    color: #454545 !important;
+}
+
+/* ! product card */
+.product-card .card .card-img-top{
+    height: 104px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.card-img-top{
+    border-top-left-radius: calc(0.375rem - 1px);
+    border-top-right-radius: calc(0.375rem - 1px);
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* ! logo - product */
+.product-card .card .logo{
+    margin-top: 54px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 15%);
+    height: 66px;
+    width: 116px;
+    padding: 0.5rem !important;
+    margin-left: 1.5rem !important;
+    top: 0;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+
+.logo .lazy{
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+    max-height: 100%;
+}
+
+.png_card-body{
+    width: 100%;
+}
+
+.png__card-body{
+    flex: 1 1 auto;
+    display: flex;
+    min-height: 1px;
+    padding: 1.5rem;
+    padding-bottom: 1.25rem !important;
+    justify-content: space-between;
+    flex-direction: column !important;
+}
+
+.product-card .card .card-title{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.card-subtitle{
+    margin-bottom: 0;
+    margin-top: -0.5rem;
+    color: #fff;
+}
+
+.badge{
+    line-height: 1.25rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    font-size: .75rem;
+    font-weight: 400;
+    padding: 0.125rem 0.5rem;
+    text-align: center;
+    vertical-align: inherit;
+    white-space: nowrap;
+}
+
+.badge-light{
+    color: #00262b;
+}
+
+.bg-light-300{
+    background-color: #f2f0ef !important;
+}
+
+
+/* ! Footer card */
+.product-card .card .card-footer{
+    padding-bottom: 10px;
+    padding-top: 22px;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.text-white, .ti-icon{
+    color: #fff;
+}
+
+.ti-icon{
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+}
+
+.product-card:hover{
+    box-shadow: 5px 10px 10px#ccc;
+    border-radius: 4px;
+}
+
+/* ! Explore top course */
+#explore-top-course__list{
+    display: flex;
+    width: 100%;
+}
+
+ 
+@media (max-width: 1920px) {
+    #explore-top-course__list{
+        padding-left: 3rem !important;
+        padding-top: 3rem !important;
+    }    
+}
+
+
+
+.footer-card__certificate{
+    color: #fff;
+}

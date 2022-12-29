@@ -1,0 +1,147 @@
+/* ! Header */
+.mit-header{
+    position: relative;
+}
+
+.header-search{
+    display: flex;
+}
+
+@media only screen and (min-width: 1180px){
+    .mit-header{
+        padding: 0;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .mit-header{
+        background-color: #fff;
+        padding: 0px;
+        top: 0px;
+        width: 100%;
+        z-index: 999;
+    }
+}
+
+.mit-header{
+    box-shadow: 2px 2px 4px #00000080;
+    font-weight: 700;
+    width: 100%;
+    z-index: 999;
+}
+
+/* ! header-search site-header-content align-items-center */
+#branding img{
+    width: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* ! PRIMARY MENU BAR */
+#primary-menu-bar{
+    width: 100%;
+}
+
+/* @media  (min-width: 768px) {
+    .nav{
+        display: flex;
+    }
+} */
+
+#nav-list__menu-bar li{
+    display: inline-block;
+}
+
+#nav-list__menu-bar li a {
+    color: #00262b;
+    padding: 0 15px;
+    line-height: 76px;
+    display: inline-block;
+}
+
+/* ! NOTE */
+#notification{
+    background-color: #03C7E8;
+    color: #00262B;
+}
+
+#notification{
+    margin: auto;   
+    width: 100%;
+    padding-top: 4px;
+    max-height: 100px;
+}
+
+#notification p{
+    margin: auto;
+    text-align: center;
+    font-size: .875rem;
+}
+@media (min-width: 600px){
+    #notification p{
+      line-height: 36px;
+    }
+}
+
+/* ! Multiple menu */
+#nav-items__course{
+    position: relative;
+}
+
+#nav-items__course > .subnav{
+    position: absolute;
+    background-color: #fff;
+    width: 500%;
+}
+
+.subnav > h3{
+    margin: 20px;
+}
+
+.subnav > li{
+    margin: 3px;
+}
+
+.subnav li:hover > a,
+#nav-list__menu-bar > li:hover > a{
+    background-color: #00262b;
+    color: #fff !important;
+    transition: 500ms;
+}
+
+.subnav li:hover > a{
+    text-decoration: underline;
+}
+
+#nav-items__course .subnav{
+    display: none;
+    border-radius: 6px;
+    border: 1px solid #ccc
+}
+
+#nav-list__menu-bar > li:hover .subnav{
+    display: block;
+}
+
+/* ! Log in */
+#login__btn > button{
+    width: 150px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #e8505b;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+}
+
+#login__btn button:hover{
+    background-color: #921108;
+}
+
+#login__btn button a{
+    color: #fff;
+}
+
