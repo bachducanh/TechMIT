@@ -1,3 +1,19 @@
+DEMO Web
+Management Information Technology
+
+Nhóm MIT-TechX
+Thành Viên: Nguyễn Tiến Đạt, Bạch Đức Anh
+1. Mô tả trang web: MIT-TechX là trang web lưu trữ học liệu, tài liệu học tập, lấy ý tưởng từ 2 trang web nổi bật hiện nay như :
+•	CS50's Introduction to Programming with Python (harvard.edu): https://cs50.harvard.edu/python/2022/
+•	edX: https://www.edx.org/
+2. Mô tả công việc:
+Bạch Đức Anh
+-	Lên ý tưởng dự án
+-	Xây dựng giao diện index, user cho trang web với 2 ngôn ngữ chính là HTML & CSS
+Nguyễn Tiến Đạt
+-	Xây dựng login, quiz, khóa học với ngôn ngữ chính là JS
+
+Những thành phần sử dụng chủ yếu trong trang web
 BEM: BOX - ELEMEMT - MODIFIERAS
     Syntax: 
     block__element
@@ -5,9 +21,6 @@ BEM: BOX - ELEMEMT - MODIFIERAS
     block__element--modifier
 
 
-```
-Code CSS dinh vl
-```
 Outline for programming 
 - header : đầu trang
 - navigation: điều hướng
@@ -17,30 +30,6 @@ Outline for programming
 - content: nội dung
 - footer: chân trang
 
-Phân tích main-page
-1. header{
-
-}
-2. slider
-3. content{
-    heading
-    sidebar{
-        new-content
-
-        top-courses
-
-        target-content
-
-    }
-    
-}
-4. footer
-
-ctrl + shift + L : select all elements we choose
-
-ctrl + alt + -> 
-
-
 CSS{
     vị trí  
     kích thước
@@ -48,7 +37,7 @@ CSS{
     kiểu dáng (kiểu chữ, hình tròn, hình vuông,...)
 }
 
-5 bộ môn: 
+5 bộ môn chính (chưa hoàn thiện)
 Khoa học máy tính
 Công nghệ phần mềm
 Kỹ thuật máy tính
@@ -87,7 +76,12 @@ SQL: https://prod-discovery.edx-cdn.org/media/course/image/2b907cc6-4020-4242-a3
 computer network: https://prod-discovery.edx-cdn.org/media/programs/card_images/64b3c632-8610-4b17-9a48-9efee7fa3266-6a1e055774b4.jpg
 
 
+Làm việc nhóm thông qua sử dụng git và github
+
+1. push code
 git add .
 git commit -m "push"
 git push
+
+2. dowload: git pull
 
