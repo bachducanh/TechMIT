@@ -85,3 +85,9 @@ C++: https://prod-discovery.edx-cdn.org/media/programs/card_images/8b78e5ec-a9fd
 SQL: https://prod-discovery.edx-cdn.org/media/course/image/2b907cc6-4020-4242-a369-38a48ae95f83-53ead9cc7188.jpeg   
 
 computer network: https://prod-discovery.edx-cdn.org/media/programs/card_images/64b3c632-8610-4b17-9a48-9efee7fa3266-6a1e055774b4.jpg
+
+
+git add .
+git commit -m "push"
+git push
+

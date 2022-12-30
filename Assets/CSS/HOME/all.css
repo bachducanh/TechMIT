@@ -55,3 +55,17 @@ ul{
     font-weight: 400px;
     line-height: 1,5rem;
 }
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+}
