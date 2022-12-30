@@ -32,3 +32,62 @@ function goFurther(){
         document.getElementById('btnSubmit').style = 'background: lightgray;';
     }
 }
+
+// user
+class Account {
+    constructor(username, password, email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+}
+var list_users = new Array();
+
+var user1 = new Account('admin','123','ad@edu');
+var user2 = new Account('dtn','1811','datlcpro@gmail.com');
+var user3 = new Account('bda','2201','bachducanh.jr@gmail.com');
+
+
+list_users.push(user1);
+list_users.push(user2);
+list_users.push(user3);
+
+var btn_submit = document.getElementById('submit-btn');
+var username = document.querySelector('input[placeholder="Username or Email"]');
+var password = document.querySelector('input[placeholder="Password"]');
+
+
+
+
+
+var isTrueAccount = () => {
+    if (username.value != '' && password.value != '') {
+        for (let i = 0; i < list_users.length; i++) {
+            if (list_users[i].username == username.value && list_users[i].password == password.value) {
+                window.localStorage.setItem('flag', i);   
+                return i;
+            }
+        }
+    }
+}
+var isLogin = () => {
+    var x = isTrueAccount();
+    if (x != undefined) {
+        if (window.localStorage.getItem('remote') == 'khoahoc') {
+            btn_submit.attributes[0].value = 'Khoahoc.html';
+        } else {
+            btn_submit.attributes[0].value = 'training.html';
+        }
+        alert('Đăng nhập thành công');
+    } else if (username.value != '' && password.value != '') {
+        error1.innerText = '';
+        error2.innerText = '*Tên tài khoản hoặc mật khẩu chưa chính xác.';
+    }
+}
+
+btn_submit.addEventListener('click', isLogin);
+
+
+
+
+

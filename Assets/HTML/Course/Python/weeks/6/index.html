@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en-us">
+<!-- Mirrored from cs50.harvard.edu/python/2022/weeks/6/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Dec 2022 07:44:41 GMT -->
+<head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width"><meta property="og:description" content="An introduction to programming using Python, a popular language for general-purpose programming, data science, web programming, and more.">
+
+        <meta property="og:image" content="../../../../../prod-discovery.edx-cdn.org/media/course/image/2cc794d0-316d-42f7-bbfd-25c34e4cd5df-033e46d516c0.small.png"><meta property="og:title" content="Week 6 File I/O - CS50's Introduction to Programming with Python">
+
+        <link href="../../favicon37c7.ico?1672371344" rel="icon">
+
+        <!-- https://fonts.google.com/specimen/PT+Sans?query=PT+Sans&selection.family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700 -->
+        <script src="../../../../../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+        <!-- https://getbootstrap.com/docs/ -->
+        <script src="../../assets/jquery/dist/jquery.min37c7.js?1672371344"></script>
+        <script src="../../assets/bootstrap/dist/js/bootstrap.bundle.min37c7.js?1672371344"></script>
+
+        <!-- https://bootstrap-table.com/docs/getting-started/introduction/ -->
+        <link href="../../assets/bootstrap-table/dist/bootstrap-table.min37c7.css?1672371344" rel="stylesheet">
+        <script src="../../assets/bootstrap-table/dist/bootstrap-table.min37c7.js?1672371344"></script>
+        <script src="../../assets/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min37c7.js?1672371344"></script>
+
+        <!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+        <link href="../../assets/%40fortawesome/fontawesome-free/css/all.min37c7.css?1672371344" rel="stylesheet">
+
+        <!-- https://moment.github.io/luxon/ -->
+        <script src="../../assets/luxon.min37c7.js?1672371344"></script>
+
+        <!-- http://docs.mathjax.org/ -->
+        <!-- https://www.jsdelivr.com/package/npm/mathjax?path=es5 -->
+        <!-- http://docs.mathjax.org/en/latest/options/output/chtml.html?highlight=displayAlign#the-configuration-block -->
+        <script>
+            MathJax = {
+               chtml: {
+                    displayAlign: "left"
+                }
+            };
+        </script>
+        <script crossorigin="anonymous" integrity="sha256-z47L98YXVhVIaY0uyDzt675P5Ea+w3RsPh9VD5NuoTY=" src="../../../../../cdn.jsdelivr.net/npm/mathjax%403.2.0/es5/tex-chtml.js"></script>
+
+        <!-- https://github.com/verlok/vanilla-lazyload -->
+        <!-- https://www.jsdelivr.com/package/npm/vanilla-lazyload -->
+        <!-- https://www.jsdelivr.com/package/npm/intersection-observer -->
+        <script crossorigin="anonymous" integrity="sha256-v3MXDIY3uujDKO0h37NoglNDp6uwq+4EmM0EkH99Uuo=" src="../../../../../cdn.jsdelivr.net/npm/intersection-observer%400.12.2/intersection-observer.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-sO6HPavoXo796Zp/bq6ts4qHOoEqfydXEXSX5NojP48=" src="../../../../../cdn.jsdelivr.net/npm/vanilla-lazyload%4017.8.3/dist/lazyload.min.js"></script>
+
+        <!-- https://github.com/davidjbradshaw/iframe-resizer -->
+        <!-- https://www.jsdelivr.com/package/npm/iframe-resizer?path=js -->
+        <script crossorigin="anonymous" integrity="sha256-oBWDuxBG1C5U0t3xjmZZ1UAlt9sKeSRk26KiVy4jxpY=" src="../../../../../cdn.jsdelivr.net/npm/iframe-resizer%404.3.2/js/iframeResizer.min.js"></script>
+
+        <!-- https://github.com/scratchblocks/scratchblocks/releases -->
+        <script src="../../assets/scratchblocks.min37c7.js?1672371344"></script>
+
+        <!-- https://mermaid-js.github.io/ -->
+        <!-- https://www.jsdelivr.com/package/npm/mermaid -->
+        <script crossorigin="anonymous" integrity="sha256-ZfzwelSToHk5YAcr9wbXAmWgyn9Jyq08fSLrLhZE89w=" src="../../../../../cdn.jsdelivr.net/npm/mermaid%409.1.6/dist/mermaid.min.js"></script>
+
+        
+
+        <link href="../../assets/page37c7.css?1672371344" rel="stylesheet">
+        <script src="../../assets/jekyll-theme-cs5037c7.js?1672371344"></script>
+
+        <script>
+            window.CS50 = {
+                local: {"day":"numeric","hour":"numeric","minute":"numeric","month":"long","timeZoneName":"short","weekday":"long","year":"numeric"},
+                locale: "en",
+                tz: "America/New_York"
+            };
+        </script>
+
+        <title>Week 6 File I/O - CS50's Introduction to Programming with Python</title>
+
+
+    </head>
+
+    <body class="invisible">
+
+        <div class="alert fixed-top mb-0 rounded-0" data-alert="success dismissible" data-hash="7effc11d8ee370d9f3e0a53f1b0b1824" id="alert" role="alert">
+            <button aria-label="Close" class="btn-close d-none" data-bs-dismiss="alert" type="button"></button><p>Interested in <a href="../../index.html#how-to-take-this-course">a verified certificate or a professional certificate</a>?</p></div>
+        
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <aside class="col-md">
+ 
+                    <header><h1 data-id="cs50s-introduction-to-programming-with-python"><a href="../../index.html">CS50’s Introduction to Programming with Python</a></h1>
+
+<p>OpenCourseWare</p>
+
+<p><a class="pr-1 small" href="https://cs50.harvard.edu/donate">Donate<i aria-hidden="true" class="fas fa-external-link-alt ps-2"></i></a></p>
+
+<p><a href="https://cs.harvard.edu/malan/">David J. Malan</a>
+<br>
+<a href="mailto:malan@harvard.edu">malan@harvard.edu</a>
+<br>
+<a class="mr-1" href="https://www.facebook.com/dmalan"><i aria-hidden="true" class="fab fa-facebook-f" title="Facebook"></i><span class="sr-only">Facebook</span></a>
+<a class="mr-1" href="https://github.com/dmalan"><i aria-hidden="true" class="fab fa-github" title="GitHub"></i><span class="sr-only">GitHub</span></a>
+<a class="mr-1" href="https://www.instagram.com/davidjmalan/"><i aria-hidden="true" class="fab fa-instagram" title="Instagram"></i><span class="sr-only">Instagram</span></a>
+<a class="mr-1" href="https://www.linkedin.com/in/malan/"><i aria-hidden="true" class="fab fa-linkedin" title="LinkedIn"></i><span class="sr-only">LinkedIn</span></a>
+<a class="mr-1" href="https://orcid.org/0000-0001-5338-2522"><i aria-hidden="true" class="fab fa-orcid" title="ORCID"></i><span class="sr-only">ORCID</span></a>
+<a class="mr-1" href="https://www.quora.com/profile/David-J-Malan"><i aria-hidden="true" class="fab fa-quora" title="Quora"></i><span class="sr-only">Quora</span></a>
+<a class="mr-1" href="https://www.reddit.com/user/davidjmalan"><i aria-hidden="true" class="fab fa-reddit-alien" title="Reddit"></i><span class="sr-only">Reddit</span></a>
+<a class="mr-1" href="https://www.tiktok.com/@davidjmalan"><i aria-hidden="true" class="fab fa-tiktok" title="TikTok"></i><span class="sr-only">TikTok</span></a>
+<a class="mr-1" href="https://davidjmalan.t.me/"><i aria-hidden="true" class="fab fa-telegram" title="Telegram"></i><span class="sr-only">Telegram</span></a>
+<a class="mr-1" href="https://twitter.com/davidjmalan"><i aria-hidden="true" class="fab fa-twitter" title="Twitter"></i><span class="sr-only">Twitter</span></a></p></header>
+
+                    
+
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-bs-target="aside > nav" data-bs-toggle="collapse">
+                        Menu
+                    </button>
+
+                    <nav class="collapse d-md-block" id="nav"><hr>
+
+<ol start="0">
+  <li><a href="../0/index.html">Functions, Variables</a></li>
+  <li><a href="../1/index.html">Conditionals</a></li>
+  <li><a href="../2/index.html">Loops</a></li>
+  <li><a href="../3/index.html">Exceptions</a></li>
+  <li><a href="../4/index.html">Libraries</a></li>
+  <li><a href="../5/index.html">Unit Tests</a></li>
+  <li><a href="index.html">File I/O</a></li>
+  <li><a href="../7/index.html">Regular Expressions</a></li>
+  <li><a href="../8/index.html">Object-Oriented Programming</a></li>
+  <li><a href="../9/index.html">Et Cetera</a></li>
+</ol>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="../../honesty/index.html">Academic Honesty</a></li>
+  <li data-marker="*"><a href="../../certificate/index.html">CS50 Certificate</a></li>
+  <li data-marker="*"><a href="../../faqs/index.html">FAQs</a></li>
+  <li data-marker="*"><a href="https://cs50.me/cs50p">Gradebook</a></li>
+  <li data-marker="*"><a href="../../shorts/index.html">Shorts</a></li>
+</ul>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="https://cs50.edx.org/ed">Ed Discussion</a> for Q&amp;A</li>
+  <li data-marker="*" class="small"><a href="https://us.edstem.org/quickstart/ed-discussion.pdf">Quick Start Guide</a></li>
+</ul>
+
+<hr>
+
+<ul class="small">
+  <li data-marker="*"><a href="https://apps.apple.com/us/app/cs50/id1631064453">Apple TV</a></li>
+  <li data-marker="*"><a href="https://cs50.edx.org/python">edX</a></li>
+  <li data-marker="*"><a href="https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V">YouTube</a></li>
+</ul>
+
+<hr>
+
+<ul class="small">
+  <li data-marker="*"><a href="https://cs50.statuspage.io/">Status Page</a></li>
+</ul>
+
+<hr>
+
+<ul>
+  <li data-marker="*"><a href="../../communities/index.html"><strong>Communities</strong></a></li>
+  <li data-marker="*" class="small"><a href="https://www.clubhouse.com/club/cs50">Clubhouse</a></li>
+  <li data-marker="*" class="small"><a href="https://discord.gg/cs50">Discord</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://cs50.edx.org/ed">Ed</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.facebook.com/groups/cs50/">Facebook Group</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.facebook.com/cs50/">Facebook Page</a></li>
+  <li data-marker="*" class="small"><a href="https://github.com/cs50">GitHub</a></li>
+  <li data-marker="*" class="small"><a href="https://gitter.im/cs50/x">Gitter</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://instagram.com/cs50">Instagram</a></li>
+  <li data-marker="*" class="small"><a href="https://www.linkedin.com/groups/7437240/">LinkedIn Group</a></li>
+  <li data-marker="*" class="small"><a href="https://www.linkedin.com/school/CS50/">LinkedIn Page</a></li>
+  <li data-marker="*" class="small"><a href="https://cs50.medium.com/">Medium</a></li>
+  <li data-marker="*" class="small"><a href="https://www.quora.com/topic/CS50">Quora</a></li>
+  <li data-marker="*" class="small"><a href="https://www.reddit.com/r/cs50/">Reddit</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://cs50.edx.org/slack">Slack</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.snapchat.com/add/cs50">Snapchat</a></li>
+  <li data-marker="*" class="small"><a href="https://soundcloud.com/cs50">SoundCloud</a></li>
+  <li data-marker="*" class="small"><a href="https://cs50.stackexchange.com/">Stack Exchange</a> <span class="badge bg-light ms-1 py-1 rounded-pill text-dark">Q&amp;A</span></li>
+  <li data-marker="*" class="small"><a href="https://www.tiktok.com/@cs50">TikTok</a></li>
+  <li data-marker="*" class="small"><a href="https://twitter.com/cs50">Twitter</a></li>
+  <li data-marker="*" class="small"><a href="http://www.youtube.com/subscription_center?add_user=cs50tv">YouTube</a></li>
+</ul>
+
+<hr>
+
+<p><a href="https://cs50.harvardshop.com/"><img src="../../../../../i.imgur.com/GGMdcKt.png" alt="Harvard Shop"></a></p>
+
+<hr>
+
+<p><a href="../../license/index.html" class="small"><i class="fab fa-creative-commons me-1"></i>License</a></p></nav>
+
+                    <footer></footer>
+
+                </aside>
+
+                <main class="col-md">
+
+                    <h1 id="week-6-file-io">Week 6 <em>File I/O</em></h1>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/KD-Yoel6EVQ"></iframe>
+
+<ul>
+  <li data-marker="-">Lecture
+    <ul>
+      <li data-marker="*"><a href="../../notes/6/index.html">Notes</a></li>
+      <li data-marker="+">Audio
+        <ul>
+          <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lecture6.mp3">MP3</a></li>
+        </ul>
+      </li>
+      <li data-marker="-">Slides
+        <ul>
+          <li data-marker="*"><a href="https://docs.google.com/presentation/d/1Gl-n6oAn4WhtIcPOboIGGX7-11AcmJLXZv3RR5Nm4UY/edit?usp=sharing">Google Slides</a></li>
+          <li data-marker="*"><a href="https://cdn.cs50.net/python/2022/x/lectures/6/lecture6.pdf">PDF</a></li>
+        </ul>
+      </li>
+      <li data-marker="-">Source Code
+        <ul>
+          <li data-marker="*"><a href="https://cdn.cs50.net/python/2022/x/lectures/6/src6/">Index</a></li>
+          <li data-marker="*"><a href="https://cdn.cs50.net/python/2022/x/lectures/6/src6.pdf">PDF</a></li>
+          <li data-marker="*"><a href="https://cdn.cs50.net/python/2022/x/lectures/6/src6.zip">Zip</a></li>
+        </ul>
+      </li>
+      <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lang/en/lecture6.srt">Subtitles</a></li>
+      <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lang/en/lecture6.txt">Transcript</a></li>
+      <li data-marker="-">Video
+        <ul>
+          <li data-marker="*"><a href="https://video.cs50.io/KD-Yoel6EVQ">CS50 Video Player</a></li>
+          <li data-marker="+">MP4
+            <ul>
+              <li data-marker="+">HDR
+                <ul>
+                  <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lecture6-4k-hdr.mp4">4K</a></li>
+                </ul>
+              </li>
+              <li data-marker="+">SDR
+                <ul>
+                  <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lecture6-360p.mp4">360p</a></li>
+                  <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lecture6-720p.mp4">720p</a></li>
+                  <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lecture6-1080p.mp4">1080p</a></li>
+                  <li data-marker="*"><a href="http://cdn.cs50.net/python/2022/x/lectures/6/lecture6-4k.mp4">4K</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li data-marker="*"><a href="https://youtu.be/KD-Yoel6EVQ">YouTube</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*"><a href="../../psets/6/index.html">Problem Set 6</a></li>
+</ul>
+
+
+                </main>
+
+            </div>
+
+        </div>
+
+        
+ 
+        <script src="../../assets/page37c7.js?1672371344"></script>
+
+    
+
+
+</body>
+<!-- Mirrored from cs50.harvard.edu/python/2022/weeks/6/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Dec 2022 07:44:41 GMT -->
+</html>
