@@ -1,0 +1,60 @@
+body {
+    overflow-y: hidden;
+}
+
+
+/* Main-Box --------------------------------------*/
+#main {
+    width: 1366px;
+    margin: 0;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+/* Main-left */
+#main-left {
+    width: 28%;
+    background-color: rgb(240, 240, 240);
+    overflow: scroll;
+
+
+}
+#main-left .list-inline li {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.sub-menu li {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.407);
+}
+
+.sub-menu li a {
+    font-weight: normal;
+    font-size: 15px;
+    color:rgb(40, 40, 40);
+}
+
+
+
+
+/* Main-Right */
+
+#main-right {
+    width: 72%;
+    overflow: scroll;
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    margin-left: 30px;
+}
+.frame-video {
+    width: 642px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
