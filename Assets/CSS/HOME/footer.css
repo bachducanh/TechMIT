@@ -1,0 +1,53 @@
+/* ! Footer */
+footer{
+    padding-top: 3rem !important;
+    min-height: 500px;
+    background-color: #00262b;
+    color: #fff;
+}
+
+.footer-container a {
+    color: #fff;
+}
+
+.footer-container{
+    padding-left: 3rem !important;
+    padding-top: 3rem !important;
+    padding-right: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+.footer-logo{
+    width: 100%;
+    padding-bottom: 50px;
+}
+.mit-contact .ti-box{
+    margin-right: 12px;
+}
+
+.footer__box .mit-contact a , 
+.general-introduction h3,
+.general-introduction a,
+.study-mit a,
+.study-mit h3{
+    display: block;
+    padding: 6px 0;
+}
+
+.footer__box{
+    display: flex !important;
+    /* flex-wrap: wrap; */
+}
+
+.mit-contact{
+    flex: 1;
+}
+.general-introduction{
+    flex: 1;
+}
+.study-mit{
+    flex: 1;
+}
+
+.general-introduction > h3{
+    color: #fff;
+}

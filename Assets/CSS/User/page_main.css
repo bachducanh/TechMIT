@@ -1,0 +1,119 @@
+.box-introduction{
+    border: 1px solid #00262b
+}
+
+#primary-main {
+    display: flex !important;
+}
+
+@media (min-width: 900px) {
+    #primary-main {
+        padding-top: 3rem !important;
+        padding-right: 3rem !important;
+    }
+}
+
+#my_course {
+    flex: 2;
+}
+
+#recommendation {
+    flex: 1;
+}
+
+.box-introdution__python{
+    display: flex;
+    padding: 5px;
+    padding-top: 10px;
+    background-color: #00262b;
+    color: #fff;
+}
+
+.box-introdution__python .pic-introdution{
+    padding-right: 20px;
+}
+
+.generality-course  a  button {
+    width: 200px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-1{
+    flex: 1;
+}
+
+.time-end-resume{
+    padding-top: 1em;
+}
+
+.txt-space{
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.flex-4{
+    flex: 4;
+}
+
+.box-introduction,
+.box-introdution__python,
+.related-programs,
+.get-the-most
+{
+    border-radius:6px;
+}
+
+.get-the-most{
+    background-color: #F2F0EF;
+    padding-left: 20px;
+}
+
+.related-programs{
+    padding-left: 20px;
+}
+
+.btn-btn__Upgrade a button{
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.padding-style{
+    padding-left: 3rem !important;
+}
+
+
+.recommend-container{
+    /* background-color: #F2F0EF; */
+    border-radius: 6px;
+    width: 100%;
+    height: 500px;
+}
+
+.box-recommend{
+    background-color: #fff;
+    margin: auto 10px;
+    width: 100%;
+    display: flex;
+    padding-top: 50px;
+
+}
+
+.logo-school{
+    padding-right: 20px;
+}
