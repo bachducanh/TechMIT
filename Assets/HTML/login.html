@@ -2,17 +2,8 @@
 <html>
 <head>
 	<link rel="shortcut icon" type="png" href="../../Assets/IMG/Logo/Logo trường.png">
-	<title>HNUE Login</title>
+	<title>TECH MIT Login</title>
 	<link rel="stylesheet" type="text/css" href="../../Assets/CSS/Login/loginStyle.CSS">
-
-  <!-- It will redirect to the Home Page after submitting the form -->
-	<script>
-	$(document).ready(function(){
-		$("form").submit(function(){
-		alert("Great Job !");
-		});
-	});
-	</script>
 </head>
 <body>
 		<div class="form-box">
@@ -24,7 +15,7 @@
 			
 			<form id="login" class="input-group" action="../HTML/page/page_main.html">
 				<div class="inp">
-					<img src="../../Assets/IMG/icon/user.png"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+					<img src="../../Assets/IMG/icon/user.png"><input type="text" id="email" class="input-field" placeholder="Username or Email" style="width: 88%; border:none;" required="required">
 				</div>
 				<div class="inp">
 					<img src="../../Assets/IMG/icon/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
@@ -34,10 +25,10 @@
 			</form>
 
 			<form id="register" class="input-group" action ="login.html">
-				<input type="text" class="input-field" placeholder="Full Name" required="required">
+				<input type="text" class="input-field" placeholder="UserName" required="required">
 				<input type="email" class="input-field" placeholder="Email Address" required="required">
-				<input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
-				<input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+				<input type="password" class="input-field" placeholder="Create Password" name="passame" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password" name="passame" required="required">
 				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
 				<button type="submit" id="btnSubmit" class="submit-btn reg-btn">Register</button>
 			</form>
