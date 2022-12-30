@@ -126,7 +126,7 @@
 }
 
 /* ! Log in */
-#login__btn > button{
+#login__btn > a > button{
     width: 150px;
     height: 40px;
     margin-right: 20px;
@@ -141,7 +141,7 @@
     background-color: #921108;
 }
 
-#login__btn button a{
+#login__btn a button{
     color: #fff;
 }
 
